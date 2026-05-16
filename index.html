@@ -1,90 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FINAL ACTIVITY</title>
+
+    <link rel="icon" type="image/jpg" href="emailsicantsend.jpg">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            overflow:hidden;
+        }
+
+        /* LOGIN PAGE */
+
+        #login-screen{
+            position:fixed;
+            inset:0;
+
+            background-image:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('sabrina.jpg');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .login-box{
+            width:320px;
+            padding:30px;
+            background:rgba(255,255,255,0.1);
+            backdrop-filter:blur(10px);
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .login-box h1{
+            color:white;
+            margin-bottom:10px;
+        }
+
+        .login-box p{
+            color:white;
+            margin-bottom:20px;
+        }
+
+        .login-box input{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:5px;
+        }
+
+        .login-box button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:5px;
+            background:pink;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        /* MAIN CONTENT */
+
+        #main-content{
+            display:none;
+        }
+
+        .page{
+            display:none;
+            min-height:100vh;
+            padding:40px;
+        }
+
+        /* ACTIVITY 2 */
+
+        #page1{
+            background:#111;
+            color:white;
+        }
+
+        .btn-grid{
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+            margin-top:30px;
+        }
+
+        .uberbutton{
+            background:black;
+            color:white;
+            border:none;
+            padding:15px 30px;
+            cursor:pointer;
+        }
+
+        .amazonbutton{
+            background:rgb(255,216,20);
+            border:none;
+            padding:15px 40px;
+            border-radius:30px;
+            cursor:pointer;
+        }
+
+        .githubbutton{
+            background:rgb(46,164,79);
+            color:white;
+            border:none;
+            padding:15px 30px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        .bootstrapbutton{
+            background:rgb(121,82,179);
+            color:white;
+            border:none;
+            padding:15px 30px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .bootstrap2button{
+            background:white;
+            border:1px solid gray;
+            padding:15px 30px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .linkedinbutton{
+            background:rgb(10,102,194);
+            color:white;
+            border:none;
+            padding:15px 30px;
+            border-radius:30px;
+            cursor:pointer;
+        }
+
+        .linkedin2button{
+            background:white;
+            color:rgb(10,102,194);
+            border:1px solid rgb(10,102,194);
+            padding:15px 30px;
+            border-radius:30px;
+            cursor:pointer;
+        }
+
+        /* ACTIVITY 3 */
+
+        #page2{
+            background:#555;
+            color:white;
+        }
+
+        #page2 button{
+            transition:0.3s;
+        }
+
+        #page2 .uberbutton:hover{
+            opacity:0.7;
+        }
+
+        #page2 .amazonbutton:hover{
+            background:gold;
+        }
+
+        #page2 .githubbutton:hover{
+            box-shadow:0px 4px 10px rgba(0,0,0,0.5);
+        }
+
+        #page2 .bootstrapbutton:hover{
+            background:purple;
+        }
+
+        #page2 .bootstrap2button:hover{
+            background:gray;
+            color:white;
+        }
+
+        #page2 .linkedinbutton:hover{
+            background:darkblue;
+        }
+
+        #page2 .linkedin2button:hover{
+            background:lightblue;
+        }
+
+        /* ACTIVITY 4 */
+
+        #page3{
+            background:black;
+            color:white;
+            text-align:center;
+        }
+
+        #page3 img{
+            width:300px;
+            border-radius:10px;
+            margin-top:20px;
+        }
+
+        #page3 audio{
+            margin-top:20px;
+        }
+
+        /* ACTIVITY 5 */
+
+        #page4{
+            background-image:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('sabrina.jpg');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero h1{
+            font-size:70px;
+        }
+
+        .hero p{
+            margin-top:20px;
+            font-size:20px;
+        }
+
+        .hero button{
+            margin-top:20px;
+            padding:15px 30px;
+            border:none;
+            border-radius:5px;
+            background:pink;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        /* PAGINATION */
+
+        .pagination{
+            position:fixed;
+            bottom:20px;
+            left:50%;
+            transform:translateX(-50%);
+            display:flex;
+            gap:10px;
+        }
+
+        .pagination button{
+            width:40px;
+            height:40px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
 <div id="login-screen">
+
     <div class="login-box">
 
-        <h1>Sabrina Carpenter </h1>
+        <h1>Sabrina Carpenter 🎵</h1>
 
-        <p style="color:white; margin-bottom:20px;">
-            Please login to continue
-        </p>
+        <p>Please login first</p>
 
-        <div class="error-msg" id="error-msg">
-            Please fill in all fields.
-        </div>
+        <input type="text" placeholder="Username">
 
-        <input type="text" id="username" placeholder="Username">
+        <input type="password" placeholder="Password">
 
-        <input type="password" id="password" placeholder="Password">
-
-        <button onclick="doLogin()">Login</button>
+        <button onclick="login()">LOGIN</button>
 
     </div>
+
 </div>
 
-<style>
-#login-screen {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-}
+<!-- MAIN CONTENT -->
 
-#login-screen::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+<div id="main-content">
 
-    background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('sabrina.jpg');
+    <!-- ACTIVITY 2 -->
 
-    background-size: cover;
-    background-position: center;
+    <div class="page" id="page1">
 
-    filter: blur(8px);
-    transform: scale(1.1);
+        <h1>ACTIVITY #2 CSS BASIC</h1>
 
-    z-index: -1;
-}
+        <div class="btn-grid">
 
-.login-box {
-    width: 300px;
-    padding: 30px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 10px;
-    text-align: center;
-    backdrop-filter: blur(8px);
+            <button class="uberbutton">Request now</button>
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+            <button class="amazonbutton">Add to cart</button>
 
-.login-box h1 {
-    color: white;
-    margin-bottom: 10px;
-}
+            <button class="githubbutton">Sign up</button>
 
-.login-box input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: none;
-    border-radius: 5px;
-}
+            <button class="bootstrapbutton">Get started</button>
 
-.login-box button {
-    width: 100%;
-    padding: 10px;
-    background: pink;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+            <button class="bootstrap2button">Download</button>
 
-.error-msg {
-    color: red;
-    margin-bottom: 10px;
-    display: none;
-}
-</style>
+            <button class="linkedinbutton">Apply on company website</button>
+
+            <button class="linkedin2button">Save</button>
+
+        </div>
+
+    </div>
+
+    <!-- ACTIVITY 3 -->
+
+    <div class="page" id="page2">
+
+        <h1>ACTIVITY #3 HOVER SHADOW AND TRANSITION</h1>
+
+        <div class="btn-grid">
+
+            <button class="uberbutton">Request now</button>
+
+            <button class="amazonbutton">Add to cart</button>
+
+            <button class="githubbutton">Sign up</button>
+
+            <button class="bootstrapbutton">Get started</button>
+
+            <button class="bootstrap2button">Download</button>
+
+            <button class="linkedinbutton">Apply on company website</button>
+
+            <button class="linkedin2button">Save</button>
+
+        </div>
+
+    </div>
+
+    <!-- ACTIVITY 4 -->
+
+<div class="page" id="page3"
+style="
+background-image:url('emailsicantsend.jpg');
+background-size:cover;
+background-position:center;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+color:white;
+">
+
+    <!-- SONG TITLE -->
+
+    <h2 style="
+    color:red;
+    margin-bottom:20px;
+    text-shadow:0 0 10px black;
+    font-size:40px;
+    ">
+        Sabrina Carpenter - emails i can't send
+    </h2>
+
+    <!-- AUDIO -->
+
+    <audio controls style="
+    width:400px;
+    margin-bottom:20px;
+    background:orangered;
+    border-radius:30px;
+    padding:5px;
+    ">
+
+        <source src="Sabrina Carpenter - emails i can't send.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- GIF + LABEL -->
+
+    <div class="gif-row"
+    style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    color:orangered;
+    font-size:30px;
+    text-shadow:0 0 10px black;
+    ">
+
+        <img
+        src="tears.gif"
+        style="width:70px; height:70px;">
+
+        <span>
+            emails i can't send Album
+        </span>
+
+        <img
+        src="tears.gif"
+        style="width:70px; height:70px;">
+
+    </div>
+
+</div>
+
+    <!-- ACTIVITY 5 -->
+
+    <div class="page" id="page4">
+
+        <div class="hero">
+
+            <h1>HERO PAGE</h1>
+
+            <h2>SABRINA EMAILS I CAN'T SEND</h2>
+
+            <p>
+                Experience the emotional and dreamy atmosphere
+                of Sabrina Carpenter’s album.
+            </p>
+
+            <button>Listen Now</button>
+
+        </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+
+    <div class="pagination">
+
+        <button onclick="changePage(-1)"><</button>
+
+        <button onclick="goTo(1)">1</button>
+
+        <button onclick="goTo(2)">2</button>
+
+        <button onclick="goTo(3)">3</button>
+
+        <button onclick="goTo(4)">4</button>
+
+        <button onclick="changePage(1)">></button>
+
+    </div>
+
+</div>
+
+<script>
+
+    function login(){
+
+        document.getElementById("login-screen").style.display="none";
+
+        document.getElementById("main-content").style.display="block";
+
+        goTo(1);
+    }
+
+    let current = 1;
+
+    function goTo(n){
+
+        let pages = document.querySelectorAll(".page");
+
+        pages.forEach(page=>{
+            page.style.display="none";
+        });
+
+        document.getElementById("page"+n).style.display="block";
+
+        current = n;
+    }
+
+    function changePage(num){
+
+        current += num;
+
+        if(current < 1){
+            current = 1;
+        }
+
+        if(current > 4){
+            current = 4;
+        }
+
+        goTo(current);
+    }
+
+</script>
+
+</body>
+</html>
