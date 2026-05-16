@@ -1,35 +1,90 @@
-<div class="page" id="page1"
-style="
-background-image:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-url('emailsicantsend.jpg');
-background-size:cover;
-background-position:center;
-height:100vh;
-backdrop-filter:blur(10px);
-">
+<div id="login-screen">
+    <div class="login-box">
 
-    <div class="hero">
+        <h1>Sabrina Carpenter </h1>
 
-        <h1 class="hero-title" style="color: white;">
-             HERO <span style="color: white;">PAGE</span><br>
-            SABRINA EMAILS I CAN'T SEND
-        </h1>
-
-        <p class="hero-sub" style="color: white;">
-            Experience the emotional and dreamy atmosphere of Sabrina Carpenter’s
-            emails i can't send album. 
+        <p style="color:white; margin-bottom:20px;">
+            Please login to continue
         </p>
 
-        <div class="hero-btns">
-            <button class="btn-primary">
-                ▶ Play Now
-            </button>
-
-            <button class="btn-outline">
-                Explore Album
-            </button>
+        <div class="error-msg" id="error-msg">
+            Please fill in all fields.
         </div>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="doLogin()">Login</button>
 
     </div>
 </div>
+
+<style>
+#login-screen {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+
+#login-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('sabrina.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+    transform: scale(1.1);
+
+    z-index: -1;
+}
+
+.login-box {
+    width: 300px;
+    padding: 30px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.error-msg {
+    color: red;
+    margin-bottom: 10px;
+    display: none;
+}
+</style>
