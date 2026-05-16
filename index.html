@@ -1,64 +1,35 @@
-<!-- PAGE 2: ACTIVITY #4 HTML IMAGE, FAVICON AND AUDIO -->
-<div class="page" id="page2"
+<div class="page" id="page1"
 style="
-background-image:url('emailsicantsend.jpg');
+background-image:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url('emailsicantsend.jpg');
 background-size:cover;
 background-position:center;
 height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-color:white;
+backdrop-filter:blur(10px);
 ">
 
-    <!-- SONG TITLE -->
-    <h2 style="
-    color:red;
-    margin-bottom:20px;
-    text-shadow:0 0 10px black;
-    font-size:40px;
-    ">
-        Sabrina Carpenter - emails i can't send
-    </h2>
+    <div class="hero">
 
-    <!-- AUDIO -->
-    <audio controls style="
-    width:400px;
-    margin-bottom:20px;
-    background:orangered;
-    border-radius:30px;
-    padding:5px;
-    ">
-        <source src="Sabrina Carpenter - emails i can't send.mp3" type="audio/mpeg">
-    </audio>
+        <h1 class="hero-title" style="color: white;">
+             HERO <span style="color: white;">PAGE</span><br>
+            SABRINA EMAILS I CAN'T SEND
+        </h1>
 
-    <!-- GIF + LABEL -->
-    <div class="gif-row"
-    style="
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-    color:orangered;
-    font-size:30px;
-    text-shadow:0 0 10px black;
-    ">
+        <p class="hero-sub" style="color: white;">
+            Experience the emotional and dreamy atmosphere of Sabrina Carpenter’s
+            emails i can't send album. 
+        </p>
 
-        <img class="gif"
-        src="tears.gif"
-        alt="tears gif"
-        style="width:70px; height:70px;">
+        <div class="hero-btns">
+            <button class="btn-primary">
+                ▶ Play Now
+            </button>
 
-        <span class="gif-label">
-            emails i can't send Album
-        </span>
+            <button class="btn-outline">
+                Explore Album
+            </button>
+        </div>
 
-        <img class="gif"
-        src="tears.gif"
-        alt="tears gif"
-        style="width:70px; height:70px;">
     </div>
-
 </div>
